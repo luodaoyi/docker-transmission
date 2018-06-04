@@ -1,0 +1,22 @@
+version: '3'
+services:
+  web:
+    image: luodaoyi/docker-transmission
+    restart: always
+    environment: 
+      - TZ=Europe/London
+      - PGID=1001
+      - PUID=1001
+    ports:
+      - "9091:9091"
+      - "51413:51413"
+      - "51413:51413/udp"
+    volumes:
+      - config:/config
+      - downloads:/downloads
+      - watch:/watch
+
+volumes:
+  config:
+  downloads:
+  watch:
