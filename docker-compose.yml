@@ -3,7 +3,7 @@ services:
   web:
     image: luodaoyi/docker-transmission
     restart: always
-    environment: 
+    environment:
       - TZ=Europe/London
       - PGID=1001
       - PUID=1001
@@ -18,5 +18,11 @@ services:
 
 volumes:
   config:
+      external:
+          name: ~/transmission/config
   downloads:
+      external:
+          name: ~/transmission/downloads
   watch:
+      external:
+          name: ~/transmission/watch
