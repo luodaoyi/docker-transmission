@@ -19,6 +19,18 @@ Transmission is designed for easy, powerful use. Transmission has the features y
 
 [![transmission](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/transmission.png)][appurl]
 
+## 中文说明 
+
+使用:
+
+下载项目中的docker-compose.yml文件。
+改动你要改的设置
+然后使用docker-compose up -d 启动
+然后找到对应的volume 中的config修改你需要的配置
+volume 一般在 `/var/lib/docker/volume` 中
+
+
+
 ## Usage
 
 ```
